@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gino di Giglie - Guesthouse in Giulianova Lido</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    header {
+      background-color: #2a5d84;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .language-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .language-toggle button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: #1e3d5a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    nav {
+      background-color: #1e3d5a;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    footer {
+      background-color: #2a5d84;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    .cta {
+      display: block;
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 1.2rem;
+      color: white;
+      background-color: #3273a8;
+      padding: 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .music-button {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .music-button button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: #1e3d5a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="language-toggle">
+      <button onclick="switchLanguage()"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/22px-Flag_of_the_United_States.svg.png" alt="US Flag" style="width: 16px; height: 16px; vertical-align: middle;"> Switch to Italian</button>
+    </div>
+    <img src="Gino di Giglie Affittacamere logo.jpg" alt="Gino di Giglie Guesthouse logo" class="logo" />
+    <p>Guesthouse in Giulianova Lido - Where the sea meets hospitality</p>
+  </header>
+
+  <nav>
+    <a href="#rooms">Photos</a>
+    <a href="#services">Services</a>
+    <a href="#location">Location</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="rooms">
+    <h2>The House</h2>
+    <p>Comfort and tranquility steps from the sea. Spacious rooms, 2 bathrooms, kitchen, living room, courtyard, free Wi-Fi, and more.</p>
+    <img src="BED ROOM 2_1.jpg" alt="Spacious rooms" loading="lazy" />
+    <img src="LIVING ROOM 1.jpg" alt="Living room" loading="lazy" />
+    <img src="Kitchen 1.jpg" alt="Kitchen" loading="lazy" />
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Free Wi-Fi throughout the property</li>
+      <li>Beach access agreement</li>
+      <li>Luggage storage</li>
+      <li>Restaurant partnership</li>
+    </ul>
+  </section>
+
+  <section id="location">
+    <h2>Where We Are</h2>
+    <p>Via Quarnaro 15, Giulianova Lido 64021, Italy, steps from the beach in the heart of Giulianova Lido.</p>
+    <iframe
+      src="https://www.google.com/maps?q=42.754175,13.967576&hl=en&z=17&output=embed"
+      width="100%"
+      height="300"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:linoecotone@pec.it">linoecotone@pec.it</a></p>
+    <p>Phone: +39 333 123 4567 (Francesco)</p>
+    <p>Follow us on Instagram and Facebook to stay updated!</p>
+    <a href="#" class="cta">Book Now - GEMINI Srl</a>
+  </section>
+
+  <div class="music-button">
+    <button onclick="playMusic()">🎵 Play Ambient Music</button>
+  </div>
+
+  <footer>
+    <p>© 2025 Gino di Giglie | Guesthouse in Giulianova Lido</p>
+    <div style="margin-top: 1rem;">
+      <img src="Logo simple.png" alt="Logo Gino di Giglie" style="max-width:200px;" />
+    </div>
+  </footer>
+
+  <!-- Hidden Music Player -->
+  <div style="display: none;">
+    <iframe 
+      id="ytplayer"
+      type="text/html"
+      width="0"
+      height="0"
+      src="https://www.youtube.com/embed/G9sdTJGe7go?start=2412&autoplay=1&loop=1&playlist=G9sdTJGe7go"
+      frameborder="0"
+      allow="autoplay"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <script>
+    function playMusic() {
+      const iframe = document.getElementById("ytplayer");
+      iframe.style.display = "block";
+      const src = iframe.src;
+      iframe.src = "";
+      iframe.src = src;
+    }
+
+    function switchLanguage() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
