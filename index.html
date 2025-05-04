@@ -27,13 +27,30 @@
       color: white;
       padding: 2rem;
       text-align: center;
+      position: relative;
     }
 
     .logo {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  margin-bottom: 1rem;
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .language-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .language-toggle button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: #1e3d5a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
 
     nav {
@@ -99,6 +116,9 @@
 
 <body>
   <header>
+    <div class="language-toggle">
+      <button onclick="switchLanguage()">Passa all'Inglese</button>
+    </div>
     <img src="Gino di Giglie Affittacamere logo.jpg" alt="Gino di Giglie Affittacamere logo" class="logo" />
     <p>Affittacamere a Giulianova Lido - Dove il mare incontra l'ospitalità</p>
   </header>
@@ -151,11 +171,11 @@
   </section>
 
   <div class="music-button">
-    <button onclick="playMusic()">🎵 Play Ambient Music</button>
+    <button onclick="playMusic()">🎵 Riproduci musica ambientale</button>
   </div>
 
   <footer>
-    <p>&copy; 2025 Gino di Giglie | Affittacamere a Giulianova Lido</p>
+    <p>© 2025 Gino di Giglie | Affittacamere a Giulianova Lido</p>
     <div style="margin-top: 1rem;">
       <img src="Logo simple.png" alt="Logo Gino di Giglie" style="max-width:200px;" />
     </div>
@@ -182,6 +202,10 @@
       const src = iframe.src;
       iframe.src = "";
       iframe.src = src;
+    }
+
+    function switchLanguage() {
+      window.location.href = "index-en.html";
     }
   </script>
 </body>
