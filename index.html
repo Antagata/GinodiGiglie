@@ -3,43 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap" rel="stylesheet">
   <title>Gino di Giglie - Affittacamere Giulianova Lido</title>
-  <style>
-    
-    body {
-  font-family: 'Quicksand', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
-}
 
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-}
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
     header {
       background-color: #2a5d84;
       color: white;
       padding: 2rem;
       text-align: center;
     }
+
+    .logo {
+      max-width: 200px;
+      margin-bottom: 1rem;
+    }
+
     nav {
       background-color: #1e3d5a;
       padding: 1rem;
       text-align: center;
     }
+
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 1rem;
       font-weight: bold;
     }
+
     section {
       padding: 2rem;
       max-width: 900px;
       margin: auto;
     }
+
     footer {
       background-color: #2a5d84;
       color: white;
@@ -47,6 +60,7 @@ h1, h2, h3 {
       padding: 1rem;
       margin-top: 2rem;
     }
+
     .cta {
       display: block;
       text-align: center;
@@ -58,23 +72,42 @@ h1, h2, h3 {
       text-decoration: none;
       border-radius: 5px;
     }
+
     img {
       max-width: 100%;
       border-radius: 10px;
     }
+
+    .music-button {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .music-button button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: #1e3d5a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   </style>
 </head>
+
 <body>
   <header>
     <img src="Gino di Giglie Affittacamere logo.jpg" alt="Gino di Giglie Affittacamere logo" class="logo" />
     <p>Affittacamere a Giulianova Lido - Dove il mare incontra l'ospitalità</p>
   </header>
+
   <nav>
     <a href="#camere">Camere</a>
     <a href="#servizi">Servizi</a>
     <a href="#dove">Dove siamo</a>
     <a href="#contatti">Contatti</a>
   </nav>
+
   <section id="camere">
     <h2>La casa</h2>
     <p>Comfort e tranquillità a due passi dal mare. Camere spaziose, 2 bagni, cucina, salotto, cortile e Wi-Fi gratuito e molto altro.</p>
@@ -82,6 +115,7 @@ h1, h2, h3 {
     <img src="LIVING ROOM 1.jpg" alt="Salotto" loading="lazy" />
     <img src="Kitchen 1.jpg" alt="Cucina" loading="lazy" />
   </section>
+
   <section id="servizi">
     <h2>I nostri servizi</h2>
     <ul>
@@ -91,39 +125,62 @@ h1, h2, h3 {
       <li>Convenzione con ristorante</li>
     </ul>
   </section>
+
   <section id="dove">
     <h2>Dove siamo</h2>
     <p>Via Quarnaro 15, Giulianova Lido 64021, Italia, a due passi dalla spiaggia, in pieno centro di Giulianova Lido.</p>
     <iframe
-  src="https://www.google.com/maps?q=42.754175,13.967576&hl=it&z=17&output=embed"
-  width="100%"
-  height="300"
-  style="border:0;"
-  allowfullscreen=""
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-
-  width="100%"
-  height="300"
-  style="border:0;"
-  allowfullscreen=""
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe> 
+      src="https://www.google.com/maps?q=42.754175,13.967576&hl=it&z=17&output=embed"
+      width="100%"
+      height="300"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </section>
+
   <section id="contatti">
     <h2>Contattaci</h2>
     <p>Email: <a href="mailto:linoecotone@pec.it">linoecotone@pec.it</a></p>
     <p>Telefono: +39 333 123 4567 (Francesco)</p>
     <p>Seguici su Instagram e Facebook per restare aggiornato!</p>
-    <a href="#" class="cta">Prenota ora - GEMINI Srl </a>
+    <a href="#" class="cta">Prenota ora - GEMINI Srl</a>
   </section>
-    <footer>
-    <p>&copy; 2025 Gino di Giglie | Affittacamere a Giulianova Lido</p>
-  </footer>
-  <div style="text-align:center; margin-top:1rem;">
-    <img src="Logo simple.png" alt="Logo Gino di Giglie" style="max-width:200px;" />
+
+  <div class="music-button">
+    <button onclick="playMusic()">🎵 Play Ambient Music</button>
   </div>
+
+  <footer>
+    <p>&copy; 2025 Gino di Giglie | Affittacamere a Giulianova Lido</p>
+    <div style="margin-top: 1rem;">
+      <img src="Logo simple.png" alt="Logo Gino di Giglie" style="max-width:200px;" />
+    </div>
+  </footer>
+
+  <!-- Hidden Music Player -->
+  <div style="display: none;">
+    <iframe 
+      id="ytplayer"
+      type="text/html"
+      width="0"
+      height="0"
+      src="https://www.youtube.com/embed/G9sdTJGe7go?start=2412&autoplay=1&loop=1&playlist=G9sdTJGe7go"
+      frameborder="0"
+      allow="autoplay"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <script>
+    function playMusic() {
+      const iframe = document.getElementById("ytplayer");
+      iframe.style.display = "block";
+      const src = iframe.src;
+      iframe.src = "";
+      iframe.src = src;
+    }
+  </script>
 </body>
 </html>
