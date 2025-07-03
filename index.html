@@ -96,21 +96,6 @@
       max-width: 100%;
       border-radius: 10px;
     }
-
-    .music-button {
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    .music-button button {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      background-color: #1e3d5a;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
   </style>
 </head>
 
@@ -119,7 +104,7 @@
     <div class="language-toggle">
       <button onclick="switchLanguage()"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/22px-Flag_of_the_United_States.svg.png" alt="US Flag" style="width: 16px; height: 16px; vertical-align: middle;"> Switch to English</button>
     </div>
-    <img src="Tina's Beach House Logo.png" alt="Tina's Beach House Logo.png" class="logo" />
+    <img src="Tina's Beach House Logo.png" alt="Tina's Beach House Logo" class="logo" />
     <p>Affittacamere a Giulianova Lido - Dove il mare incontra l'ospitalità</p>
   </header>
 
@@ -144,7 +129,7 @@
       <li>Wi-Fi gratuito in tutta la struttura</li>
       <li>Convenzione balneare</li>
       <li>Deposito bagagli</li>
-      <li> 2 Bici</li>
+      <li>2 Bici</li>
     </ul>
   </section>
 
@@ -167,12 +152,8 @@
     <p>Email: <a href="mailto:linoecotone@pec.it">linoecotone@pec.it</a></p>
     <p>Telefono: +39 329 004 3558 (Tito)</p>
     <p>Segui il negozio Lino & Cotone su Instagram e Facebook per restare aggiornato!</p>
-    <a href="https://airbnb.com/h/Tinabeachouse" class="cta" target="_blank" rel="noopener noreferrer">Prenota ora su Airbnb</a>
+    <a href="https://airbnb.com/h/tinasbeachouse" class="cta" target="_blank" rel="noopener noreferrer">Prenota ora su Airbnb</a>
   </section>
-
-  <div class="music-button">
-    <button onclick="playMusic()">🎵 Riproduci musica ambientale</button>
-  </div>
 
   <footer>
     <p>© 2025 Gino di Giglie | Affittacamere a Giulianova Lido</p>
@@ -181,29 +162,7 @@
     </div>
   </footer>
 
-  <!-- Hidden Music Player -->
-  <div style="display: none;">
-    <iframe 
-      id="ytplayer"
-      type="text/html"
-      width="0"
-      height="0"
-      src="https://www.youtube.com/embed/G9sdTJGe7go?start=2412&autoplay=1&loop=1&playlist=G9sdTJGe7go"
-      frameborder="0"
-      allow="autoplay"
-      allowfullscreen>
-    </iframe>
-  </div>
-
   <script>
-    function playMusic() {
-      const iframe = document.getElementById("ytplayer");
-      iframe.style.display = "block";
-      const src = iframe.src;
-      iframe.src = "";
-      iframe.src = src;
-    }
-
     function switchLanguage() {
       window.location.href = "index-en.html";
     }
